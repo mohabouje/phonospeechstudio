@@ -1,3 +1,23 @@
+A real time audio signal processing tool for speech human analysis. Features:
+
+* Echo analysis.
+* Equalization.
+* Filtering.
+* Pitch Estimation.
+* PSD.
+* Energy
+* Avarage Zero Crossing Rate
+* Fundamental Frequency Estimation with different algorithms.
+* FFT Spectrogram.
+* LPC Spectrum.
+* Cepstrum.
+
+#COMPILATION
+
+On Linux, download the repository and exec install_dependencies_linux.sh  to download all required libraries.
+
+To compile use Qt Version > 5.0. Compatible with MinGW (Windows), Clang (MAC OS) ang GCC (Linux). 
+
 How to install Aquila?
 
 - Install CMake
