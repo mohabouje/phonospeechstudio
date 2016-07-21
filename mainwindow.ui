@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>996</width>
+    <height>528</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="main">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="mainSplitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="detailWidget" native="true"/>
+      <widget class="QWidget" name="chartContainer" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="ChartWidget" name="energy" native="true">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>300</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="SpectrogramWidget" name="spectrogram" native="true">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>300</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="ChartWidget" name="pitch" native="true">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>300</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="LevelWidget" name="levelWidget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>996</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="actionReload_from_file"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint"/>
+    <addaction name="actionPrint_Preview"/>
+    <addaction name="separator"/>
+    <addaction name="actionRecent_File"/>
+    <addaction name="separator"/>
+    <addaction name="actionCheck_For_Updates"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionDefault_Toolbar"/>
+    <addaction name="actionTerminal"/>
+    <addaction name="actionProcess_Toolbar"/>
+    <addaction name="actionPlayer_Toolbar"/>
+    <addaction name="actionZoom_Toolbar"/>
+    <addaction name="actionVu_Meter"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionFollow_Us"/>
+    <addaction name="actionLike_this"/>
+    <addaction name="actionContribute"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout_PhonoSpeech"/>
+    <addaction name="actionLaunch_Test"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionAudio_Configuration"/>
+    <addaction name="actionChart_Configuration"/>
+    <addaction name="actionProcessing_Configuration"/>
+    <addaction name="separator"/>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>Window</string>
+    </property>
+    <addaction name="actionTile_Horizontally"/>
+    <addaction name="actionTile_Vertically"/>
+    <addaction name="separator"/>
+    <addaction name="actionFull_Screen"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuWindow"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSettings"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionStep_Down"/>
+   <addaction name="actionPlay"/>
+   <addaction name="actionStep_Up"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoom_in"/>
+   <addaction name="actionZoom_Out"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/open.png</normaloff>:/resource/icon/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open...</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/save.png</normaloff>:/resource/icon/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/save_as.png</normaloff>:/resource/icon/save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+  <action name="actionReload_from_file">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/reload.png</normaloff>:/resource/icon/reload.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reload from file</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/print.png</normaloff>:/resource/icon/print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionPrint_Preview">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/print_preview.png</normaloff>:/resource/icon/print_preview.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print Preview</string>
+   </property>
+  </action>
+  <action name="actionRecent_File">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/recent_files.png</normaloff>:/resource/icon/recent_files.png</iconset>
+   </property>
+   <property name="text">
+    <string>Recent File</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/exit.png</normaloff>:/resource/icon/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionFollow_Us">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/twitter.png</normaloff>:/resource/icon/twitter.png</iconset>
+   </property>
+   <property name="text">
+    <string>Follow Us</string>
+   </property>
+  </action>
+  <action name="actionLike_this">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/facebook.png</normaloff>:/resource/icon/facebook.png</iconset>
+   </property>
+   <property name="text">
+    <string>Like this</string>
+   </property>
+  </action>
+  <action name="actionContribute">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/github.png</normaloff>:/resource/icon/github.png</iconset>
+   </property>
+   <property name="text">
+    <string>Contribute</string>
+   </property>
+  </action>
+  <action name="actionAbout_PhonoSpeech">
+   <property name="text">
+    <string>About PhonoSpeech</string>
+   </property>
+  </action>
+  <action name="actionAudio_Configuration">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/audio_settings.png</normaloff>:/resource/icon/audio_settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Audio Configuration</string>
+   </property>
+  </action>
+  <action name="actionChart_Configuration">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/chart_settings.png</normaloff>:/resource/icon/chart_settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Chart Configuration</string>
+   </property>
+  </action>
+  <action name="actionProcessing_Configuration">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/processing_settings.png</normaloff>:/resource/icon/processing_settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Processing Configuration</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/settings.png</normaloff>:/resource/icon/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings...</string>
+   </property>
+  </action>
+  <action name="actionVu_Meter">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/show_audio_levels.png</normaloff>:/resource/icon/show_audio_levels.png</iconset>
+   </property>
+   <property name="text">
+    <string>Vu Meter</string>
+   </property>
+  </action>
+  <action name="actionProcess_Toolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/audio_spectrum.png</normaloff>:/resource/icon/audio_spectrum.png</iconset>
+   </property>
+   <property name="text">
+    <string>Process Toolbar</string>
+   </property>
+  </action>
+  <action name="actionPlayer_Toolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/play.png</normaloff>:/resource/icon/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Player Toolbar</string>
+   </property>
+  </action>
+  <action name="actionZoom_Toolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/zoom_in.png</normaloff>:/resource/icon/zoom_in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Toolbar</string>
+   </property>
+  </action>
+  <action name="actionDefault_Toolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/default_panel.png</normaloff>:/resource/icon/default_panel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Default Toolbar</string>
+   </property>
+  </action>
+  <action name="actionTile_Horizontally">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/tile_horizontally.png</normaloff>:/resource/icon/tile_horizontally.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tile Horizontally</string>
+   </property>
+  </action>
+  <action name="actionTile_Vertically">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/tile_vertically.png</normaloff>:/resource/icon/tile_vertically.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tile Vertically</string>
+   </property>
+  </action>
+  <action name="actionFull_Screen">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/full_screen.png</normaloff>:/resource/icon/full_screen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Full Screen</string>
+   </property>
+  </action>
+  <action name="actionZoom_in">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/zoom_in.png</normaloff>:/resource/icon/zoom_in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+  </action>
+  <action name="actionZoom_Out">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/zoom_out.png</normaloff>:/resource/icon/zoom_out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/play.png</normaloff>:/resource/icon/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Play</string>
+   </property>
+  </action>
+  <action name="actionStep_Up">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/step_up.png</normaloff>:/resource/icon/step_up.png</iconset>
+   </property>
+   <property name="text">
+    <string>Step Up</string>
+   </property>
+  </action>
+  <action name="actionStep_Down">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/step_down.png</normaloff>:/resource/icon/step_down.png</iconset>
+   </property>
+   <property name="text">
+    <string>Step Down</string>
+   </property>
+  </action>
+  <action name="actionCheck_For_Updates">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/check_updates.png</normaloff>:/resource/icon/check_updates.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check For Updates</string>
+   </property>
+  </action>
+  <action name="actionTerminal">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/resource/icon/terminal.png</normaloff>:/resource/icon/terminal.png</iconset>
+   </property>
+   <property name="text">
+    <string>Terminal</string>
+   </property>
+  </action>
+  <action name="actionLaunch_Test">
+   <property name="text">
+    <string>Launch Test</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>LevelWidget</class>
+   <extends>QWidget</extends>
+   <header>phonowidget/levelwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ChartWidget</class>
+   <extends>QWidget</extends>
+   <header>phonowidget/chartwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SpectrogramWidget</class>
+   <extends>QWidget</extends>
+   <header>spectrogramwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="images.qrc"/>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

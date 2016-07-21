@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PhonoAudioSettings</class>
+ <widget class="QDialog" name="PhonoAudioSettings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>362</width>
+    <height>265</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QToolButton" name="toolButton">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/resource/icon/audio_settings.png</normaloff>:/resource/icon/audio_settings.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="autoRaise">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Audio Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_2" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="3">
+       <widget class="QComboBox" name="difCombo"/>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="dofCombo"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QToolButton" name="sampleButton">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/resource/icon/audio_spectrum.png</normaloff>:/resource/icon/audio_spectrum.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="autoRaise">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QToolButton" name="difButton">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/resource/icon/microphone.png</normaloff>:/resource/icon/microphone.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="autoRaise">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Default Output Device</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Default Input Device</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Sample Rate</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QComboBox" name="srCombo"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QToolButton" name="dofButton">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/resource/icon/loudspeaker.png</normaloff>:/resource/icon/loudspeaker.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="autoRaise">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+  <include location="images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>PhonoAudioSettings</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>PhonoAudioSettings</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

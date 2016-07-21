@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProcessingSettings</class>
+ <widget class="QDialog" name="ProcessingSettings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>373</width>
+    <height>533</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="header" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QToolButton" name="toolButton">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/resource/icon/processing_settings.png</normaloff>:/resource/icon/processing_settings.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="autoRaise">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Processing Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="body" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>4</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="windowing">
+        <property name="title">
+         <string>Windowing</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>3</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>3</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <property name="spacing">
+          <number>4</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Window Type</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="wType">
+           <item>
+            <property name="text">
+             <string>Hamming</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Hann</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Bartlet</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Blackman</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Kaiser</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Gauss</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Window Time</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QDoubleSpinBox" name="wTime">
+           <property name="readOnly">
+            <bool>false</bool>
+           </property>
+           <property name="keyboardTracking">
+            <bool>false</bool>
+           </property>
+           <property name="decimals">
+            <number>3</number>
+           </property>
+           <property name="minimum">
+            <double>0.020000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.005000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.030000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Window Shift:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QDoubleSpinBox" name="wHope">
+           <property name="readOnly">
+            <bool>false</bool>
+           </property>
+           <property name="keyboardTracking">
+            <bool>false</bool>
+           </property>
+           <property name="decimals">
+            <number>3</number>
+           </property>
+           <property name="minimum">
+            <double>0.005000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>0.050000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.005000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.010000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>Buffer Time</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="buffer">
+           <property name="readOnly">
+            <bool>false</bool>
+           </property>
+           <property name="keyboardTracking">
+            <bool>false</bool>
+           </property>
+           <property name="minimum">
+            <number>2</number>
+           </property>
+           <property name="maximum">
+            <number>10</number>
+           </property>
+           <property name="value">
+            <number>5</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="spectrum">
+        <property name="title">
+         <string>Spectrum</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="leftMargin">
+          <number>3</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>3</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <property name="spacing">
+          <number>4</number>
+         </property>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>Order Cepstrum</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="orderCepstrum">
+           <property name="minimum">
+            <number>8</number>
+           </property>
+           <property name="maximum">
+            <number>20</number>
+           </property>
+           <property name="value">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Order LPC</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>Samples</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="specSize">
+           <property name="minimum">
+            <number>256</number>
+           </property>
+           <property name="maximum">
+            <number>4096</number>
+           </property>
+           <property name="singleStep">
+            <number>256</number>
+           </property>
+           <property name="value">
+            <number>512</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QSpinBox" name="orderFilterBanks">
+           <property name="minimum">
+            <number>10</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_18">
+           <property name="text">
+            <string>Filter Banks</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="orderLPC">
+           <property name="minimum">
+            <number>8</number>
+           </property>
+           <property name="maximum">
+            <number>20</number>
+           </property>
+           <property name="value">
+            <number>13</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="specCombo">
+           <item>
+            <property name="text">
+             <string>FFT</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>LPC</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Cepstrum</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Filter Bank</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>Algorithm</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="pitch">
+        <property name="title">
+         <string>Pitch</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <property name="leftMargin">
+          <number>3</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>3</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <property name="spacing">
+          <number>4</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Algorithm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="pitchCombo">
+           <item>
+            <property name="text">
+             <string>ACF</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AMDF</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>CEPSTRUM</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+  <include location="images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ProcessingSettings</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ProcessingSettings</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,4 @@
+/libs/
+*.pro.user
+/temp/
+*.sh~

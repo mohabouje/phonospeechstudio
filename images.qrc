@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/icon/audio_settings.png</file>
+        <file>resource/icon/audio_spectrum.png</file>
+        <file>resource/icon/chart_settings.png</file>
+        <file>resource/icon/check_updates.png</file>
+        <file>resource/icon/exit.png</file>
+        <file>resource/icon/facebook.png</file>
+        <file>resource/icon/full_screen.png</file>
+        <file>resource/icon/github.png</file>
+        <file>resource/icon/help.png</file>
+        <file>resource/icon/open.png</file>
+        <file>resource/icon/play.png</file>
+        <file>resource/icon/print.png</file>
+        <file>resource/icon/print_preview.png</file>
+        <file>resource/icon/processing_settings.png</file>
+        <file>resource/icon/recent_files.png</file>
+        <file>resource/icon/reload.png</file>
+        <file>resource/icon/save.png</file>
+        <file>resource/icon/save_as.png</file>
+        <file>resource/icon/settings.png</file>
+        <file>resource/icon/show_audio_levels.png</file>
+        <file>resource/icon/step_down.png</file>
+        <file>resource/icon/step_up.png</file>
+        <file>resource/icon/terminal.png</file>
+        <file>resource/icon/tile_horizontally.png</file>
+        <file>resource/icon/tile_vertically.png</file>
+        <file>resource/icon/twitter.png</file>
+        <file>resource/icon/zoom_in.png</file>
+        <file>resource/icon/zoom_out.png</file>
+        <file>resource/icon/default_panel.png</file>
+        <file>resource/icon/loudspeaker.png</file>
+        <file>resource/icon/microphone.png</file>
+        <file>resource/icon/tool-box.png</file>
+    </qresource>
+</RCC>
